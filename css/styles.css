@@ -2,11 +2,10 @@
 
 body {
     display: flex;
-    justify-content: center;
+    place-content: center;
     margin-top: 3rem;
-    background: #5614B0;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #DBD65C, #5614B0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #DBD65C, #5614B0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #DBD65C, #5614B0);
+    background: linear-gradient(to right, #DBD65C, #5614B0);
 
 }
 
@@ -14,10 +13,9 @@ body {
     position: absolute;
     width: 560px;
     height: 330px;
-    border: solid black 1px;
     margin-top: 80px;
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    background: rgba(248, 248, 248, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(24, 24, 24, 0.37);
     backdrop-filter: blur( 20.0px );
     -webkit-backdrop-filter: blur( 20.0px );
     border-radius: 10px;
@@ -29,18 +27,14 @@ body {
     width: 100px;
     height: 20px;
     margin-bottom: 1.5rem;
-    background: linear-gradient(145deg, #4C4C4C, #7E7E7E);
-    border-radius: 1%;
-    box-shadow: inset 17.72px 17.72px 100px #0f0f0f, inset -17.72px -17.72px 100px #949494;
+    background-color: #242424;
 }
 
 .user {
     position: absolute;
     width: 100px;
     height: 20px;
-    background-color: rgb(79, 0, 153);
-    border-radius: 1%;
-    filter: drop-shadow(0.2rem 0.2rem 0.4rem rgb(48, 48, 48));
+    background-color: rgb(156, 5, 156);
     
 }
 
@@ -49,9 +43,8 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 10px;
-    background-color:rgb(255, 255, 255);
+    background-color: white;
     filter: drop-shadow(0.3rem 0.3rem 0.2rem rgb(0, 0, 0));
-    opacity: 70%;
 
 }
 
@@ -59,7 +52,22 @@ body {
     font-family: 'Comfortaa', cursive;
     font-weight: 700;
     color: rgb(0, 0, 0);
-    margin-top: 2rem;
-    
+    margin-top: 3.7rem;
+}
 
+.btn {
+    font-family: 'Comfortaa', cursive;
+    position: relative;
+    bottom: 1.8rem;
+    padding: .2rem .5rem;
+    color: rgba(255, 255, 255, 0.842);
+    background-color: #242424;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: rgba(156, 5, 156, 0.705);
+    cursor: pointer;
+    transition: .5s;
 }

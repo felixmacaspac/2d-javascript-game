@@ -1,6 +1,9 @@
 // DOM
 const grid = document.querySelector('.grid')
 const scoreDisplay = document.querySelector('#score')
+let startBtn = document.querySelector('.start-button')
+var playing = false;
+let restartBtn = document.querySelector('.restart-button')
 
 const blockWidth = 100
 const blockHeight = 20
@@ -163,6 +166,7 @@ function checkForCollisions()
     clearInterval(timerId)
     scoreDisplay.innerHTML = 'YOU LOSE!'
     document.removeEventListener('keydown', moveUser)
+    
   }
 }
 
@@ -193,3 +197,9 @@ function changeDirection() {
     return
   }
 }
+
+// Onclick Button 
+
+restartBtn.addEventListener("click", () =>{
+  location.reload()
+});
