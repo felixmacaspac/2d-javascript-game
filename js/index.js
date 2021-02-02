@@ -117,7 +117,7 @@ function moveBall() {
     drawBall()
     checkForCollisions()
 }
-timerId = setInterval(moveBall, 20)
+// timerId = setInterval(moveBall, 20)
 
 //check for collisions
 function checkForCollisions()
@@ -166,7 +166,6 @@ function checkForCollisions()
     clearInterval(timerId)
     scoreDisplay.innerHTML = 'YOU LOSE!'
     document.removeEventListener('keydown', moveUser)
-    
   }
 }
 
@@ -199,6 +198,12 @@ function changeDirection() {
 }
 
 // Onclick Button 
+document.removeEventListener('keydown', moveUser)
+
+startBtn.addEventListener("click", () => {
+  timerId = setInterval(moveBall,15)
+  document.addEventListener('keydown', moveUser)
+});
 
 restartBtn.addEventListener("click", () =>{
   location.reload()
