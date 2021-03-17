@@ -117,7 +117,6 @@ function moveBall() {
     drawBall()
     checkForCollisions()
 }
-// timerId = setInterval(moveBall, 20)
 
 //check for collisions
 function checkForCollisions()
@@ -208,3 +207,5 @@ startBtn.addEventListener("click", () => {
 restartBtn.addEventListener("click", () =>{
   location.reload()
 });
+
+
