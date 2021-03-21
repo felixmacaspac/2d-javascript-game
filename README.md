@@ -1,1 +1,1 @@
-# javascript-first-game
+# javascript-game
