@@ -1,6 +1,11 @@
 // DOM
 const grid = document.querySelector('.grid')
 const scoreDisplay = document.querySelector('#score')
+
+const ballAudio = document.querySelector('#ball-audio')
+const clickAudio = document.querySelector('#click-audio')
+const gameOverAudio = document.querySelector('#gameover-audio')
+
 let startBtn = document.querySelector('.start-button')
 var playing = false;
 let restartBtn = document.querySelector('.restart-button')
@@ -133,6 +138,7 @@ function checkForCollisions()
       allBlocks[i].classList.remove('block')
       blocks.splice(i,1)
       changeDirection()   
+      ballAudio.play()
       score++
       scoreDisplay.innerHTML = `SCORE : ${score}`;
       if (blocks.length == 0)
@@ -162,9 +168,11 @@ function checkForCollisions()
   //game over
   if (ballCurrentPosition[1] <= 0)
   {
+    gameOverAudio.play()
     clearInterval(timerId)
     scoreDisplay.innerHTML = 'YOU LOSE!'
     document.removeEventListener('keydown', moveUser)
+    
   }
 }
 
@@ -202,10 +210,12 @@ document.removeEventListener('keydown', moveUser)
 startBtn.addEventListener("click", () => {
   timerId = setInterval(moveBall,15)
   document.addEventListener('keydown', moveUser)
+  clickAudio.play()
 });
 
 restartBtn.addEventListener("click", () =>{
   location.reload()
+  clickAudio.play()
 });
 
 
